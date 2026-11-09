@@ -1,0 +1,8 @@
+{
+  "demo": true,
+  "generated_at": "2026-01-09T18:00:00Z",
+  "timesheets": [
+    {"from_date": "2026-01-03", "to_date": "2026-01-09", "status": "Submitted for Approval"},
+    {"from_date": "2025-12-27", "to_date": "2026-01-02", "status": "Approved"}
+  ]
+}

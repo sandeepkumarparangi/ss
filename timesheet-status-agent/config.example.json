@@ -1,0 +1,20 @@
+{
+  "enabled": false,
+  "recipient": "you@company.example",
+  "interval_seconds": 3600,
+  "max_age_seconds": 7200,
+  "state_path": "data/state.sqlite3",
+  "portal_url": "https://timesheets.company.example/",
+  "source": {
+    "kind": "file",
+    "path": "examples/timesheets.demo.json"
+  },
+  "smtp": {
+    "host": "smtp.company.example",
+    "port": 587,
+    "security": "starttls",
+    "from_address": "you@company.example",
+    "username": "you@company.example",
+    "password_env": "TIMESHEET_SMTP_PASSWORD"
+  }
+}

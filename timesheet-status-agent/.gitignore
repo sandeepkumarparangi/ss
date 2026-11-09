@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+config.json
+config.*.local.json
+data/
+*.sqlite3*
+*.log
+dist/
+*.zip

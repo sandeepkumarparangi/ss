@@ -1,0 +1,28 @@
+name: Timesheet agent tests
+
+on:
+  push:
+    paths:
+      - 'timesheet-status-agent/**'
+      - '.github/workflows/timesheet-agent-tests.yml'
+  pull_request:
+    paths:
+      - 'timesheet-status-agent/**'
+      - '.github/workflows/timesheet-agent-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: timesheet-status-agent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m unittest discover -v
+      - run: python timesheet_agent.py demo
